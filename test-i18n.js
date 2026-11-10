@@ -5,7 +5,7 @@ for(const name of pages){const html=fs.readFileSync(name+'.html','utf8');assert(
 const app=fs.readFileSync('assets/app.js','utf8'),ui=fs.readFileSync('assets/ui-language.js','utf8'),home=fs.readFileSync('index.html','utf8');
 assert(app.includes("'Home catalogue'"),'English model label');assert(app.includes('Manufacturer-confirmed frontage'),'English frontage');assert(app.includes('Confirm the actual slab area'),'English model description');
 assert(app.includes('INCLUSION_LABELS_EN'),'English inclusions');assert(app.includes('function costLabel'),'English cost breakdown');
-assert(ui.includes("key==='inclusionNote'"),'Inclusions hyperlink preservation');assert(ui.includes('28.5.2'),'version');
+assert(ui.includes("key==='inclusionNote'"),'Inclusions hyperlink preservation');assert(ui.includes('2.0 — Stable'),'version');
 assert(home.includes("localStorage.setItem('paal-v2-lang',lang)"),'shared language preference');
 assert(home.includes("document.title='PAAL — '"),'home title follows language');
 assert(!fs.readFileSync('assets/cost-engine.js','utf8').includes('`Gebouw ${i+1}`'),'neutral building fallback');
